@@ -18,12 +18,30 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+.ant-layout-header {
+  background-color: #001529;
+}
+
+.ant-menu-dark.ant-menu-horizontal {
+  line-height: 64px;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #1890ff;
+}
+
+.ant-card {
+  border-radius: 10px;
+}
+
+.ant-btn-primary {
+  border-radius: 5px;
 }
 
 @layer utilities {
