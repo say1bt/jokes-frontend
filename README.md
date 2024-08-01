@@ -1,3 +1,7 @@
+Here's the updated README file with the added deployment information:
+
+---
+
 # Jokes Frontend
 
 The Jokes Frontend is a Next.js application designed to interact with the Jokes Service architecture. It provides a user-friendly interface for fetching random jokes, submitting new jokes, and moderating jokes. This application uses access tokens with interceptors to securely communicate with the backend services.
@@ -19,6 +23,8 @@ The Jokes Frontend is a Next.js application designed to interact with the Jokes 
 5. [Access Tokens](#access-tokens)
 6. [Contributing](#contributing)
 7. [License](#license)
+8. [Deployment](#deployment)
+9. [Acknowledgments](#acknowledgments)
 
 ## Installation
 
@@ -81,11 +87,9 @@ The frontend interacts with the backend services through various API endpoints:
 
 To securely communicate with the backend services, the application uses access tokens. Interceptors are set up to attach the access tokens to the headers of each request.
 
+## Deployment
 
-## Acknowledgments
-This project was developed with the assistance of AI tools like ChatGPT, which helped in generating documentation and providing coding suggestions.
-
-```
+The Jokes Frontend is deployed to AWS S3 as a static web application for easy scaling and availability.
 
 ## Contributing
 
@@ -101,6 +105,10 @@ We welcome contributions to improve the Jokes Frontend. Please follow these step
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Acknowledgments
+
+This project was developed with the assistance of AI tools like ChatGPT, which helped in generating documentation and providing coding suggestions.
+
 ---
 
-Feel free to modify this README file as needed to fit your specific project requirements.
+Feel free to adjust this README file according to your specific project needs.
