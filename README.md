@@ -106,6 +106,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 This project was developed with the assistance of AI tools like ChatGPT, which helped in generating documentation and providing coding suggestions.
 
----
 
-Feel free to adjust this README file according to your specific project needs.
