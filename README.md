@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jokes Frontend
 
-## Getting Started
+The Jokes Frontend is a Next.js application designed to interact with the Jokes Service architecture. It provides a user-friendly interface for fetching random jokes, submitting new jokes, and moderating jokes. This application uses access tokens with interceptors to securely communicate with the backend services.
 
-First, run the development server:
+## Features
 
+- **Fetch Random Joke**: Retrieve random jokes from the backend.
+- **Submit Joke**: Allow users to submit new jokes.
+- **Moderate Jokes**: Enable moderators to manage jokes including approving, rejecting, editing, deleting, and changing categories.
+- **Secure Communication**: Utilizes access tokens with interceptors to set headers for secure communication with backend services.
+- **Responsive Design**: Ensures a seamless user experience across different devices.
+
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Pages](#pages)
+4. [API Integration](#api-integration)
+5. [Access Tokens](#access-tokens)
+6. [Contributing](#contributing)
+7. [License](#license)
+
+## Installation
+
+To get started with the Jokes Frontend, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/say1bt/jokes-frontend.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd jokes-frontend
+   ```
+
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+To start the Jokes Frontend locally, run:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Home
 
-## Learn More
+- `GET /`: Displays a random joke fetched from the backend.
 
-To learn more about Next.js, take a look at the following resources:
+### Submit Joke
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `GET /submit`: Form for users to submit new jokes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Moderate Jokes
 
-## Deploy on Vercel
+- `GET /moderate`: List of jokes for moderators to manage.
+- `GET /moderate/:id/edit`: Form for moderators to edit an existing joke.
+- `GET /moderate/:id`: Detail view of a joke for moderation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## API Integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The frontend interacts with the backend services through various API endpoints:
+
+- `GET /api/jokes/random`: Fetch a random joke.
+- `POST /api/jokes`: Submit a new joke.
+- `GET /api/jokes/moderate`: Retrieve jokes for moderation.
+- `PUT /api/jokes/:id`: Edit an existing joke.
+- `DELETE /api/jokes/:id`: Delete a joke.
+- `POST /api/jokes/:id/approve`: Approve a joke.
+- `POST /api/jokes/:id/reject`: Reject a joke.
+- `PATCH /api/jokes/:id/category`: Change the category of a joke.
+
+## Access Tokens
+
+To securely communicate with the backend services, the application uses access tokens. Interceptors are set up to attach the access tokens to the headers of each request.
+
+
+## Acknowledgments
+This project was developed with the assistance of AI tools like ChatGPT, which helped in generating documentation and providing coding suggestions.
+
+```
+
+## Contributing
+
+We welcome contributions to improve the Jokes Frontend. Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to modify this README file as needed to fit your specific project requirements.
